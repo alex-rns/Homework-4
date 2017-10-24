@@ -11,7 +11,7 @@ body
   margin: 0
   font: 14px/24px PlayfairDisplayRegular, sans-serif
   background: #fff
-  color: #000
+  color: #626262
 div, menu, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, legend, label, select, input, textarea
   padding: 0
   margin: 0
@@ -40,6 +40,7 @@ table
   border-collapse: collapse
   border-spacing: 0
 a
+  text-decoration: none
   cursor: pointer
   &:link, &:visited
     font: 14px/24px PlayfairDisplayRegular, sans-serif
@@ -95,8 +96,6 @@ a
 
 
 
-
-
 /*----------------------------------------------------------------------------------
 /*-------------------------------------FONTS----------------------------------------
 /*----------------------------------------------------------------------------------
@@ -119,7 +118,10 @@ a
   justify-content: space-between
 .container-small
   max-width: 900px
-
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  //padding-top: 100px
 /*----------------------------------------------------------------------------------
 /*-------------------------------------HEADER---------------------------------------
 /*----------------------------------------------------------------------------------
@@ -132,21 +134,73 @@ a
   ul
     display: flex
     a
-      color: #626262
       text-transform: uppercase
       margin: 60px
   li:last-child
     a
       margin-right: 0
 
-
 /*----------------------------------------------------------------------------------
 /*-------------------------------------CONTENT--------------------------------------
 /*----------------------------------------------------------------------------------
-.top-article
-  padding: 60px 0
-  img
+article
+  margin-bottom: 130px
+  max-width: 420px
+  a
+    display: block
+    margin: 30px 0
+    color: #b4ad9e
+    font: normal 14px UbuntuLight, serif
+    text-transform: uppercase
+  h2
+    font: normal 30px Playfair Display, serif
+    margin-bottom: 40px
     width: 100%
+
+.top-article
+  max-width: inherit
+  padding-top: 60px
+  img
+    //padding: 0 15px
+    width: 100%
+    margin-bottom: 70px
+  a
+    margin-top: 50px
+    color: #b4ad9e
+    font-family: UbuntuLight, serif
+    text-transform: uppercase
+
+.subscribe
+  margin-bottom: 100px
+  padding-bottom: 60px
+  color: #333333
+  h2
+    padding: 75px
+    font-size: 30px
+  text-align: center
+  background: #f0f0f0
+.subscribe-form
+  //margin: 0 auto
+  width: 450px
+  margin: auto
+  //text-align: left
+  padding-bottom: 12px
+  display: flex
+  justify-content: space-between
+  border-bottom: 1px #000 solid
+  //:[placeholder]
+  //  color: red
+  //  font-size: 50px
+  input
+    width: 100%
+    background: none
+    border: none
+
+  button
+    width: 32px
+    border: none
+    background: url("../images/send-icon.png") no-repeat
+
 /*----------------------------------------------------------------------------------
 /*-------------------------------------SIDEBAR--------------------------------------
 /*----------------------------------------------------------------------------------
@@ -155,14 +209,14 @@ a
 /*-------------------------------------FOOTER---------------------------------------
 /*----------------------------------------------------------------------------------
 footer
-  padding: 40px
+  padding: 40px 0
   background: #f0f0f0
   .container-small
     display: flex
     justify-content: space-between
     align-items: center
     a
-      margin-left: 15px
+      margin-right: 15px
 .social
   .fa
     font-size: 18px
@@ -170,7 +224,6 @@ footer
     margin-left: 10px
     display: inline
     li
-      color: #626262
       display: inline-block
 /*----------------------------------------------------------------------------------
 /*-------------------------------------OTHER----------------------------------------
