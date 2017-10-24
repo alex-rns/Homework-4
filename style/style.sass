@@ -9,7 +9,7 @@ body
   height: 100%
   padding: 0
   margin: 0
-  font: 12px Tahoma, sans-serif
+  font: 14px/24px PlayfairDisplayRegular, sans-serif
   background: #fff
   color: #000
 div, menu, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, legend, label, select, input, textarea
@@ -24,7 +24,7 @@ button
   list-style: none
   cursor: pointer
 select, input, textarea, button
-  font: 12px Tahoma, sans-serif
+  font: 14px/24px PlayfairDisplayRegular, sans-serif
   vertical-align: middle
 textarea
   vertical-align: top
@@ -41,7 +41,7 @@ table
   border-spacing: 0
 a
   &:link, &:visited
-    font: 12px Tahoma, sans-serif
+    font: 14px/24px PlayfairDisplayRegular, sans-serif
     color: #000
     text-decoration: underline
   &:hover
@@ -92,13 +92,28 @@ a
   -webkit-box-sizing: border-box
   box-sizing: border-box
 
+
+
+
+
 /*----------------------------------------------------------------------------------
 /*-------------------------------------FONTS----------------------------------------
 /*----------------------------------------------------------------------------------
-
+@font-face
+  font-family: "PlayfairDisplayRegular"
+  src: url("../fonts/PlayfairDisplay-Regular.ttf")
+@font-face
+  font-family: "UbuntuLight"
+  src: url("../fonts/Ubuntu-Light.ttf")
 /*----------------------------------------------------------------------------------
 /*-------------------------------------WRAPPER--------------------------------------
 /*----------------------------------------------------------------------------------
+.wrapper
+  min-height: calc(100% - 100px)
+.container
+  max-width: 1060px
+  margin: 0 auto
+
 
 /*----------------------------------------------------------------------------------
 /*-------------------------------------HEADER---------------------------------------
@@ -115,7 +130,22 @@ a
 /*----------------------------------------------------------------------------------
 /*-------------------------------------FOOTER---------------------------------------
 /*----------------------------------------------------------------------------------
-
+footer
+  padding: 40px
+  background: #f0f0f0
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    a
+      margin-right: 15px
+.social
+  ul
+    margin-left: 15px
+    display: inline
+    li
+      color: #626262
+      display: inline-block
 /*----------------------------------------------------------------------------------
 /*-------------------------------------OTHER----------------------------------------
 /*----------------------------------------------------------------------------------
