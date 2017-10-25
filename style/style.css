@@ -60,6 +60,14 @@ a {
   a:hover {
     text-decoration: none; }
 
+::-webkit-input-placeholder {
+  font: 14px/24px PlayfairDisplay, serif;
+  color: #282828; }
+
+::-moz-placeholder {
+  color: #282828;
+  font: 14px/24px PlayfairDisplay, serif; }
+
 /*---------------------------------------------------------------------------------- */
 /*-------------------------------------DEFAULT CLASSES------------------------------ */
 /*---------------------------------------------------------------------------------- */
@@ -117,7 +125,7 @@ a {
     clear: both;
     visibility: hidden; }
 
-* {
+*, :after, :before {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -158,10 +166,6 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
@@ -226,9 +230,9 @@ article {
     font-size: 30px; }
 
 .subscribe-form {
-  width: 450px;
+  width: 380px;
   margin: auto;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,10 +246,28 @@ article {
     width: 100%;
     background: none;
     border: none; }
-  .subscribe-form button {
-    width: 32px;
-    border: none;
-    background: url("../images/send-icon.png") no-repeat; }
+    .subscribe-form input::-webkit-input-placeholder {
+      font: 14px / 24px PlayfairDisplay, serif;
+      color: #626262; }
+    .subscribe-form input:-ms-input-placeholder {
+      font: 14px / 24px PlayfairDisplay, serif;
+      color: #626262; }
+    .subscribe-form input::placeholder {
+      font: 14px / 24px PlayfairDisplay, serif;
+      color: #626262; }
+    .subscribe-form input[type=submit] {
+      width: 32px;
+      border: none;
+      background: url("../images/send-icon.png") no-repeat; }
+
+.load-more {
+  padding: 8px 20px;
+  color: #626262;
+  border: 1px solid;
+  background: inherit;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 60px; }
 
 /*---------------------------------------------------------------------------------- */
 /*-------------------------------------SIDEBAR-------------------------------------- */
