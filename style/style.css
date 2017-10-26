@@ -202,8 +202,11 @@ a {
 /*-------------------------------------CONTENT-------------------------------------- */
 /*---------------------------------------------------------------------------------- */
 article {
-  margin-bottom: 130px;
-  max-width: 420px; }
+  margin-bottom: 120px;
+  max-width: 420px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
   article a {
     display: inline-block;
     margin: 30px 0;
@@ -211,13 +214,19 @@ article {
     font: normal 14px UbuntuLight, serif;
     text-transform: uppercase; }
     article a:hover {
-      -webkit-transform: skew(180deg);
-      -ms-transform: skew(180deg);
-      transform: skew(180deg); }
-  article h2 {
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05); }
+  article h2, article h2 > a {
     font: normal 30px Playfair Display, serif;
     margin-bottom: 40px;
     width: 100%; }
+    article h2 > a, article h2 > a > a {
+      margin: 0;
+      color: #626262;
+      text-transform: none; }
+      article h2 > a:hover, article h2 > a > a:hover {
+        text-decoration: underline; }
 
 .top-article {
   margin: 0 auto;
